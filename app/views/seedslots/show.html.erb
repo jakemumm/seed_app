@@ -1,0 +1,24 @@
+<p>
+  <strong>Title:</strong>
+  <%= @seedslot.title %>
+</p>
+ 
+<p>
+  <strong>Par:</strong>
+  <%= @seedslot.par %>
+</p>
+
+<p>
+  <strong>Last Year:</strong>
+  <%= @seedslot.last_year %>
+</p>
+
+<p>
+  <strong>This Year:</strong>
+  <%= @seedslot.this_year %>
+</p>
+
+<%= link_to 'Edit This Seed', edit_seedslot_path(@seedslot) %>
+<%= link_to 'Edit Seed Rack', seedslots_edit_mode_path %>
+<%= link_to 'Add New Seed Pocket', new_seedslot_path, class: "nav_bar" %>
+

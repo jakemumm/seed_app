@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prod_num: 1
+  title: MyString
+  par: 1
+  last_year: 1
+  this_year: 1
+
+two:
+  prod_num: 1
+  title: MyString
+  par: 1
+  last_year: 1
+  this_year: 1

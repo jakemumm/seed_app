@@ -1,0 +1,12 @@
+
+        <div class="seed_pocket_title">
+          <% seed = seedslot.seedrecs.first %>
+          <p># <%= seed.prod_num %> </p>
+          <p class="seed_title"><b><%= seed.title %></b></p>
+        </div>
+
+        <div class="seed_pocket_stats">
+          <p>Par   LY   TY   order</p>
+          <p><%= seed.par %> / <%= seed.last_year %> / <%= seed.this_year %> / <%= seed.add_to_order %></p>
+        </div>
+    

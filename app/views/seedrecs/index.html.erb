@@ -1,0 +1,40 @@
+<h1>Seed Records For This Store</h1>
+<br>
+
+<table>
+	<tr>
+		<th>Product Number</th>
+		<th>Title</th>
+		<th>Par</th>
+		<th>Sold This Year</th>
+		<th>Sold Last Year</th>
+		<th>Current Order</th>
+		<th>SKU</th>
+		<th>In Stock?</th>
+		<th>Pockets on Rack</th>
+	</tr>
+
+	<% @seedrecs.each do |seedrec| %>
+	    
+	    <tr>
+	    	<td><%= seedrec.prod_num %></td>
+	    	<td><%= seedrec.title %></td>
+	    	<td><%= seedrec.par %></td>
+	    	<td><%= seedrec.this_year %></td>
+	    	<td><%= seedrec.last_year %></td>
+	    	<td><%= seedrec.add_to_order %></td>
+	    	<td><%= seedrec.sku %></td>
+	    	<td><%= seedrec.in_stock %></td>
+	    	<td><%= seedrec.seedslots.length %></td>
+	    	<td><%= link_to 'Edit', edit_seedrec_path(seedrec) %></td>
+	    	<td><%= link_to 'Delete', seedrec_path(seedrec),
+	    			method: :delete,
+	    			data: { confirm: 'Delete ' + seedrec.title + ' ?' } %></td>
+	    </tr>
+	    
+	<% end %> <!-- seedslots loop -->
+
+</table>
+
+<br><br><br>
+<%= link_to 'Add New Seed Record', new_seedrec_path %>

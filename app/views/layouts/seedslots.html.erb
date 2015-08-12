@@ -1,0 +1,27 @@
+<% content_for :seed_rack_nav do %>
+
+<div class="nav_bar">
+  <nav class="seed_display_menu">
+    <ul>
+      
+      <li><%= link_to 'Order Seeds', seedslots_path, 
+      	class: (current_page?(action: 'index') ? 'current_page' : nil) %></li>
+      
+      <li><%= link_to 'Edit Seed Pocket', seedslots_edit_mode_path, 
+      	class: (current_page?(action: 'edit_mode') ? 'current_page' : nil) %></li>
+
+      <li><%= link_to 'Add Seed Pocket', new_seedslot_path, 
+      	class: (current_page?(action: 'new') ? 'current_page' : nil) %></li>
+      
+      <li><%= link_to '(delete) Seed Pocket', seedslots_delete_mode_path, 
+      	class: (current_page?(action: 'delete_mode') ? 'current_page' : nil) %></li>
+
+    </ul>
+  </nav>
+</div> 
+
+<%= yield %>
+
+<% end %>
+
+<%= render template: "layouts/application" %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  content: MyText
+  seedslot_id: 
+
+two:
+  date: MyString
+  content: MyText
+  seedslot_id: 

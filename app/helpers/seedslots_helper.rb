@@ -1,0 +1,2 @@
+module SeedslotsHelper
+end

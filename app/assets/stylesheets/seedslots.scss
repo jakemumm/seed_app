@@ -1,0 +1,100 @@
+// Place all the styles related to the seedslots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* Navigation */
+
+.nav_bar {
+	background-color: #A6A6A6;
+}
+
+.nav_bar a:link, .nav_bar a:visited {
+    display: block;
+    margin: 4px 0 0 0;
+    border-right: 1px solid #CFCFCF;
+    color: #FFFFFF;
+    background-color: #A6A6A6;
+    text-align: center;
+    padding: 10px 6px;
+    text-decoration: none;
+}
+
+.nav_bar a:hover, .nav_bar a:active {
+    border-top: 1px solid #CFCFCF;
+    padding-bottom: 9px;
+}
+
+.nav_bar a.current_page {
+	background-color: #CFCFCF;
+}
+
+
+/* seed display */
+
+.rack_container {
+	margin: 0;
+	padding: 0;
+	padding-top: .75em;
+	width: 100%;
+	text-align: center;
+	background-color: #CFCFCF;
+}
+
+.seed_pocket { 
+	float: left;
+	width: 16%;
+
+    border: 1px dotted gray;
+	background-color: #FFFFFF;
+}
+
+.rack_container a:link, .rack_container a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.rack_container a:visited {
+	border: 2px solid orange;
+	background-color: orange;
+	color: orange;
+}
+
+.rack_container a:hover, .rack_container a:active {
+	color: #757575;
+	background-color: orange;
+	display: block;
+}
+
+.seedslot_link {
+	
+}
+
+.seed_pocket_title {
+	height: 3em;
+    width: 90%; /* = 100% - 2*5% padding */
+    padding: 5% 5% 0 5%;
+    /*border: 1px solid red; */
+}
+
+.seed_title a:link, .seed_title a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.seed_title a:hover, .seed_title a:active {
+	color: #757575;
+}
+
+.seed_pocket_stats {
+	width: 90%;
+	height: 3em;
+    padding: .75em 5% 0 5%;
+    font-size: 80%;
+    /*border: 1px solid red; */
+}
+
+.seed_display_menu ul li {
+	float: left;
+}

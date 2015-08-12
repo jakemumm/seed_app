@@ -1,0 +1,41 @@
+<p>
+<strong>Product Number</strong>
+<%= @seedrec.prod_num %>
+</p>
+
+<p>
+<strong>Title</strong>
+<%= @seedrec.title %>
+</p>
+
+<p>
+<strong>Par</strong>
+<%= @seedrec.par %>
+</p>
+
+<p>
+<strong>Last Year</strong>
+<%= @seedrec.last_year %>
+</p>
+
+<p>
+<strong>This Year</strong>
+<%= @seedrec.this_year %>
+</p>
+
+<p>
+<strong>SKU</strong>
+<%= @seedrec.sku %>
+</p>
+
+<p>
+<strong>In Stock?</strong>
+<%= @seedrec.in_stock %>
+</p>
+
+<br>
+<%= link_to 'Edit This Seed Record', edit_seedrec_path(@seedrec) %>
+<br><br>
+<%= link_to 'Add New Seed Record', new_seedrec_path %>
+<br><br>
+<%= link_to 'View All Seed Records', seedrecs_path %>

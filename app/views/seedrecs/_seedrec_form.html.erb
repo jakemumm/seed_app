@@ -1,0 +1,59 @@
+<%= form_for @seedrec do |f| %>
+
+  <% if @seedrec.errors.any? %>
+    <div class="error_explanation">
+      <h2>
+        <%= pluralize(@seedrec.errors.count, "error") %> prohibited
+        this seedrec from being saved:
+      </h2>
+      <ul>
+        <% @seedrec.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <%= f.label 'Product Number' %><br>
+    <%= f.text_field :prod_num %>
+  </p>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :par %><br>
+    <%= f.text_field :par %>
+  </p>
+
+  <p>
+    <%= f.label :last_year %><br>
+    <%= f.text_field :last_year %>
+  </p>
+
+  <p>
+    <%= f.label :this_year %><br>
+    <%= f.text_field :this_year %>
+  </p>
+
+  <p>
+    <%= f.label :sku %><br>
+    <%= f.text_field :sku %>
+  </p>
+
+  <p>
+    <%= f.label :in_stock %><br />
+    <%= f.label :in_stock, "Yes", :value => "true"  %>
+    <%= f.radio_button :in_stock, true, :checked => true %>
+    <%= f.label :in_stock, "No", :value => "false" %>
+    <%= f.radio_button :in_stock, false %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

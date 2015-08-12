@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SeedOrderApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="main_container">
+
+<header class="main_header">
+
+<h1>Renee's Garden</h1>
+
+</header>
+
+<div id="seed_rack_nav"><%= content_for?(:seed_rack_nav) ? yield(:seed_rack_nav) : yield %></div>
+
+</div> <!-- main_container -->
+
+</body>
+</html>

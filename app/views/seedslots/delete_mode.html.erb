@@ -1,0 +1,20 @@
+<div class="rack_container">
+
+  <% @seedslots.each do |seedslot| %>
+    
+    <div class="seed_pocket">
+
+      <%= link_to seedslot_path(seedslot), 
+      		class: "seedslot_link", 
+      		method: :delete,
+      		data: { confirm: 'Are you sure you want to delete this seed packet?' } do %>
+
+        <%= render 'seed_rack', seedslot: seedslot %>
+    
+      <% end %> <!-- link loop -->
+
+    </div> <!-- seed_pocket -->
+    
+  <% end %> <!-- seedslots loop -->
+
+</div> <!-- rack_container -->

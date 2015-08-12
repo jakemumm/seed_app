@@ -1,0 +1,19 @@
+<div class="rack_container">
+
+  <% @seedslots.each do |seedslot| %>
+
+    <div class="seed_pocket">
+
+      <%= form_for seedslot.seedrecs.first, {method: :put} do |f| %>
+          <%= render partial: 'seed_rack', locals: {seedslot: seedslot} %>
+          <%= f.hidden_field :add_to_order, value: seedslot.seedrecs.first.six_more %>
+
+            <button type="submit">Add to Order</button>
+      <% end %>
+
+    </div> <!-- seed_pocket -->
+
+  <% end %> <!-- seedslots loop -->
+
+</div> <!-- rack_container -->
+

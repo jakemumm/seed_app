@@ -1,0 +1,41 @@
+<%= form_for @seedslot do |f| %>
+
+  <% if @seedslot.errors.any? %>
+    <div class="error_explanation">
+      <h2>
+        <%= pluralize(@seedslot.errors.count, "error") %> prohibited
+        this seedslot from being saved:
+      </h2>
+      <ul>
+        <% @seedslot.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :par %><br>
+    <%= f.text_field :par %>
+  </p>
+
+  <p>
+    <%= f.label :last_year %><br>
+    <%= f.text_field :last_year %>
+  </p>
+
+  <p>
+    <%= f.label :this_year %><br>
+    <%= f.text_field :this_year %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,18 @@
+<div class="rack_container">
+
+  <% @seedslots.each do |seedslot| %>
+    
+    <div class="seed_pocket">
+
+      <%= link_to edit_seedslot_path(seedslot), class: "seedslot_link" do %>
+
+        <%= render 'seed_rack', seedslot: seedslot %>
+    
+      <% end %> <!-- link loop -->
+      
+    </div> <!-- seed_pocket -->
+    
+  <% end %> <!-- seedslots loop -->
+
+</div> <!-- rack_container -->
+
